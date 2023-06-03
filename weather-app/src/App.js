@@ -1,13 +1,12 @@
-import { useContext } from 'react';
-import { WeatherContext } from './WeatherProvider/WeatherProvider';
+import WeatherApp from "./WeatherApp";
+import WeatherProvider from "./WeatherProvider/WeatherProvider";
 
 function App() {
-  const weatherInfo = useContext(WeatherContext);
-  console.log(weatherInfo);
 
   return (
-    <div className="App">
-    </div>
+    <WeatherProvider>
+      <WeatherApp/>
+    </WeatherProvider>
   );
 }
 
