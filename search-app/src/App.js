@@ -1,3 +1,6 @@
+import { Navigate, Route, Routes } from "react-router-dom";
+
+import NavigationBar from "./components/NavigationBar";
 import SearchInput from "./components/SearchInput";
 
 
@@ -7,9 +10,11 @@ function App() {
       <div className="flex flex-wrap justify-center relative">
       <SearchInput/> 
       {/* 검색 input */}
-      {/* 네비게이션 */}
+      <NavigationBar/>
       </div>
-      {/* 검색 결과 */}
+      <Routes>
+        <Route exact path="/" element={<Navigate to="/all"/>}/>
+      </Routes>
     </div>
   );
 }
