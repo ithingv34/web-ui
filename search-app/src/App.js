@@ -1,12 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import SearchInput from "./components/SearchInput";
 
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <div className='bg-slate-50 min-h-screen'>
+      <div className="flex flex-wrap justify-center relative">
+      <SearchInput/> 
+      {/* 검색 input */}
+      {/* 네비게이션 */}
+      </div>
+      {/* 검색 결과 */}
+    </div>
   );
 }
 
