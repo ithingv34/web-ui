@@ -13,7 +13,7 @@ function WeatherProvider({children}) {
             const { 
                 name,
                 coord: {lat, lon},
-                main: {temp, humidity, pressure, feels_like, temp_min, temp_max},
+                main: {temp, humidity,  feels_like, temp_min, temp_max},
                 sys: {sunset, sunrise},
                 weather: [{main: weatherState}],
                 wind: {speed, deg}
@@ -23,7 +23,7 @@ function WeatherProvider({children}) {
             const threeHourlyInfo = await fetch(threeHourlyInfoAPI);
             const {list} = await threeHourlyInfo.json();
             setWeatherInfo({
-                name, temp, humidity, pressure, weatherState, feels_like, speed, deg, list, sunset, sunrise, temp_max, temp_min
+                name, temp, humidity,  weatherState, feels_like, speed, deg, list, sunset, sunrise, temp_max, temp_min
             })
         } catch (error){
             console.error(error)

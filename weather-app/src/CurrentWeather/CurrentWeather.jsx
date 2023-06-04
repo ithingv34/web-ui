@@ -9,7 +9,7 @@ function CurrentWeather() {
         <div className='weather'>
             {name} &nbsp;/
             <CurrentWeatherIcon weatherState={weatherState}/>
-            <span>{temp}&deg;</span>
+            <span>{ temp}&deg;</span>
         </div>
     )
 }
