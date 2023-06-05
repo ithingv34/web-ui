@@ -28,8 +28,8 @@ function WindDirectionTest({degree = 0}){
 
 
 function ExtraInfo() {
-    const {humidity, speed, deg, sunset, sunrise} = useContext(WeatherContext);
-
+    const {humidity, speed, deg, sunset, sunrise, list} = useContext(WeatherContext);
+    console.log(list)
     return (
         <div className='extra-info'>
         <div className='extra-info-item'>
